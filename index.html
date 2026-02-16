@@ -74,9 +74,18 @@
         <div class="row">
             <div class="col-sm-5" id="profile">
                 <img class="rounded-circle" src ="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg">
-            
 
+                <br><br>
+            
+                <form>
+                    <input type="file" class="form-control">
                 
+                    <br>
+                    
+                    <div class="d-grid gap-3">
+                        <button type="button" class="btn btn-info btn-block" onclick="uploadpic()">Upload Photo</button>
+                    </div>
+                </form>
             </div>
 
             <div class="col-sm-7">
@@ -91,12 +100,12 @@
 
                 <form>
                     <label>First Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" id="fname" class="form-control">
                     
                     <br>
 
                     <label>Last Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" id="lname" class="form-control">
                     
                     <br>
 
@@ -125,7 +134,7 @@
                     <br>
 
                     <label>Enter your password</label>
-                        <input type="number" class="form-control">
+                        <input type="password" class="form-control">
 
                     <br>
 
@@ -136,7 +145,7 @@
                     <br><br><br>
 
                     <div class="d-grid gap-3">
-                        <button type="button" class="btn btn-info btn-block" onclick="submit()"><b>CREATE MY ACCOUNT</b></button>
+                        <button type="button" class="btn btn-info btn-block" onclick="create()"><b>CREATE MY ACCOUNT</b></button>
                     </div>
 
                     <br>
@@ -150,8 +159,9 @@
     </div>
 
     <script>
-        function submit(){
-            alert()
+        function create(){
+            var x = document.getElementById("fname").value;
+            alert("You have successfully registered your account," + " " + x +"!");
        }
 
        document.getElementById('Instructions').innerHTML = "Please fill out all required fields in the registration form accurately. Once completed, review your details and click submit to finish.";
